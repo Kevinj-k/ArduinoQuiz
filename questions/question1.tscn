@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://bsnn7upf37hi8"]
+
+[ext_resource type="Texture2D" uid="uid://ct6caupofdxst" path="res://images/oberwatch.png" id="1_otg7c"]
+[ext_resource type="Script" uid="uid://8kxn3vjp3rwf" path="res://question1.cs" id="1_qp5s5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uuonc"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga5x8"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qlqr"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[node name="Node2D" type="Node2D" unique_id=793364456]
+script = ExtResource("1_qp5s5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=168338168]
+offset_right = 1156.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="title" type="Label" parent="." unique_id=1998352482]
+offset_left = -7.0
+offset_top = 9.0
+offset_right = 372.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 50
+text = "Quiz game"
+horizontal_alignment = 1
+
+[node name="answer2" type="Label" parent="." unique_id=6316148]
+offset_left = 748.0
+offset_top = 228.0
+offset_right = 1127.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 50
+text = "Paladins"
+horizontal_alignment = 1
+
+[node name="Answer1" type="Label" parent="." unique_id=1698164921]
+offset_left = 367.0
+offset_top = 227.0
+offset_right = 746.0
+offset_bottom = 318.0
+theme_override_font_sizes/font_size = 50
+text = "Overwatch"
+horizontal_alignment = 1
+
+[node name="answer3" type="Label" parent="." unique_id=971571723]
+offset_left = 4.0
+offset_top = 225.0
+offset_right = 383.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 50
+text = "Call of Duty"
+horizontal_alignment = 1
+
+[node name="question1" type="Label" parent="." unique_id=1683687762]
+offset_left = 372.0
+offset_top = 76.0
+offset_right = 751.0
+offset_bottom = 167.0
+theme_override_font_sizes/font_size = 50
+text = "What game is this"
+horizontal_alignment = 1
+
+[node name="ButtonA" type="Button" parent="." unique_id=306096144]
+offset_left = 64.0
+offset_top = 343.0
+offset_right = 321.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_uuonc")
+text = "A"
+
+[node name="ButtonB" type="Button" parent="." unique_id=177722739]
+offset_left = 425.0
+offset_top = 345.0
+offset_right = 682.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ga5x8")
+text = "B"
+
+[node name="ButtonC" type="Button" parent="." unique_id=945858013]
+offset_left = 794.0
+offset_top = 345.0
+offset_right = 1051.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qlqr")
+text = "C"
+
+[node name="Oberwatch" type="Sprite2D" parent="." unique_id=541276855]
+position = Vector2(1044, 113)
+scale = Vector2(0.4873817, 0.4873817)
+texture = ExtResource("1_otg7c")
+
+[connection signal="pressed" from="ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="ButtonC" to="." method="_on_button_c_pressed"]

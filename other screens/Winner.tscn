@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bkngdioh20aio"]
+
+[node name="Winner" type="Node2D" unique_id=1148656724]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1826622202]
+offset_right = 1229.0
+offset_bottom = 683.0
+color = Color(0.8352941, 0.9137255, 0.007843138, 1)
+
+[node name="Label" type="Label" parent="." unique_id=820136236]
+offset_left = 358.0
+offset_top = 190.0
+offset_right = 852.0
+offset_bottom = 382.0
+theme_override_colors/font_color = Color(0.87727, 0, 0.27863, 1)
+theme_override_font_sizes/font_size = 100
+text = "YOU ROCK!
+"
+horizontal_alignment = 1

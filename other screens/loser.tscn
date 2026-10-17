@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://m6f4nkhyxqg6"]
+
+[ext_resource type="Script" uid="uid://b0a0r4tn40mtb" path="res://loser.cs" id="1_ri6io"]
+
+[node name="Loser" type="Node2D" unique_id=802168072]
+script = ExtResource("1_ri6io")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=541351561]
+offset_right = 1229.0
+offset_bottom = 683.0
+color = Color(0.0071415612, 0.0071415612, 0.0071415603, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1270924733]
+offset_left = 358.0
+offset_top = 190.0
+offset_right = 852.0
+offset_bottom = 382.0
+theme_override_colors/font_color = Color(0.87727, 0, 0.27863, 1)
+theme_override_font_sizes/font_size = 100
+text = "YOU SUCK"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1392316196]
+offset_left = 368.0
+offset_top = 328.0
+offset_right = 809.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 50
+text = "RESTART????"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

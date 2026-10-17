@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://c3pbtwy8vdpkg"]
+
+[ext_resource type="Script" uid="uid://cdjh7fvxji4l4" path="res://question3.cs" id="1_oxvkv"]
+[ext_resource type="Texture2D" uid="uid://cgch5226d0gvs" path="res://images/blitz.webp" id="2_0ynjo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03pep"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsx21"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tsiel"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[node name="Question3" type="Node2D" unique_id=1269110588]
+script = ExtResource("1_oxvkv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1593721430]
+offset_right = 1156.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="title" type="Label" parent="." unique_id=680573806]
+offset_left = -7.0
+offset_top = 9.0
+offset_right = 372.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 50
+text = "Quiz game"
+horizontal_alignment = 1
+
+[node name="answer2" type="Label" parent="." unique_id=627644137]
+offset_left = 748.0
+offset_top = 228.0
+offset_right = 1127.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 50
+text = "NFL the blitz"
+horizontal_alignment = 1
+
+[node name="Answer1" type="Label" parent="." unique_id=1436950927]
+offset_left = 387.0
+offset_top = 224.0
+offset_right = 766.0
+offset_bottom = 315.0
+theme_override_font_sizes/font_size = 50
+text = "Blitz the league"
+horizontal_alignment = 1
+
+[node name="answer3" type="Label" parent="." unique_id=1481659865]
+offset_left = -2.0
+offset_top = 225.0
+offset_right = 369.0
+offset_bottom = 306.74576
+theme_override_font_sizes/font_size = 45
+text = "Blitz the league 2"
+horizontal_alignment = 1
+
+[node name="question1" type="Label" parent="." unique_id=1703798525]
+offset_left = 372.0
+offset_top = 76.0
+offset_right = 751.0
+offset_bottom = 167.0
+theme_override_font_sizes/font_size = 50
+text = "What game is this"
+horizontal_alignment = 1
+
+[node name="ButtonA" type="Button" parent="." unique_id=1348695994]
+offset_left = 64.0
+offset_top = 343.0
+offset_right = 321.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_03pep")
+text = "A"
+
+[node name="ButtonB" type="Button" parent="." unique_id=1158566154]
+offset_left = 425.0
+offset_top = 345.0
+offset_right = 682.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsx21")
+text = "B"
+
+[node name="ButtonC" type="Button" parent="." unique_id=981889033]
+offset_left = 794.0
+offset_top = 345.0
+offset_right = 1051.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_tsiel")
+text = "C"
+
+[node name="Blitz" type="Sprite2D" parent="." unique_id=1915746779]
+position = Vector2(979, 109.000015)
+scale = Vector2(0.40398356, 0.44854718)
+texture = ExtResource("2_0ynjo")
+
+[connection signal="pressed" from="ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="ButtonC" to="." method="_on_button_c_pressed"]

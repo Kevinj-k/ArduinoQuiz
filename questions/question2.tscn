@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://booa44xmk6w3n"]
+
+[ext_resource type="Texture2D" uid="uid://g8ronrd4patv" path="res://images/Ape.png" id="1_54a3l"]
+[ext_resource type="Script" uid="uid://barc8vw350e08" path="res://question2.cs" id="1_dk7yk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk7yk"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dd8bx"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3guc1"]
+bg_color = Color(0.6, 0.6, 0.9254902, 1)
+
+[node name="Question2" type="Node2D" unique_id=1280738977]
+script = ExtResource("1_dk7yk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1187036238]
+offset_right = 1156.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="title" type="Label" parent="." unique_id=119425889]
+offset_left = -7.0
+offset_top = 9.0
+offset_right = 372.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 50
+text = "Quiz game"
+horizontal_alignment = 1
+
+[node name="answer2" type="Label" parent="." unique_id=704906934]
+offset_left = 748.0
+offset_top = 228.0
+offset_right = 1127.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 50
+text = "Ape escape 3"
+horizontal_alignment = 1
+
+[node name="Answer1" type="Label" parent="." unique_id=327858361]
+offset_left = 367.0
+offset_top = 227.0
+offset_right = 746.0
+offset_bottom = 318.0
+theme_override_font_sizes/font_size = 50
+text = "Ape Escape 2	"
+horizontal_alignment = 1
+
+[node name="answer3" type="Label" parent="." unique_id=927786324]
+offset_left = 4.0
+offset_top = 225.0
+offset_right = 383.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 50
+text = "Ape escape"
+horizontal_alignment = 1
+
+[node name="question1" type="Label" parent="." unique_id=1988010693]
+offset_left = 372.0
+offset_top = 76.0
+offset_right = 751.0
+offset_bottom = 167.0
+theme_override_font_sizes/font_size = 50
+text = "What game is this"
+horizontal_alignment = 1
+
+[node name="ButtonA" type="Button" parent="." unique_id=879833724]
+offset_left = 64.0
+offset_top = 343.0
+offset_right = 321.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dk7yk")
+text = "A"
+
+[node name="ButtonB" type="Button" parent="." unique_id=525846203]
+offset_left = 425.0
+offset_top = 345.0
+offset_right = 682.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dd8bx")
+text = "B"
+
+[node name="ButtonC" type="Button" parent="." unique_id=390630323]
+offset_left = 794.0
+offset_top = 345.0
+offset_right = 1051.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_3guc1")
+text = "C"
+
+[node name="Ape" type="Sprite2D" parent="." unique_id=51791533]
+position = Vector2(977, 115.000015)
+scale = Vector2(0.45238093, 0.45238096)
+texture = ExtResource("1_54a3l")
+
+[connection signal="pressed" from="ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="ButtonC" to="." method="_on_button_c_pressed"]
